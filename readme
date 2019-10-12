@@ -8,11 +8,13 @@
 仅以test_client客户端操作为枚举
 	1.安装执行程序(略过环境配置及python安装)
 	pip install -r requirements.txt
-	2.配置environment.py,修改IP地址(服务器IP)
-	修改内容:http://172.10.20.82:4271/wd/hub
-	3.编写.feature执行文件,在test_client/目录下
+	2.配置environment.py
+	3.配置config文件夹内config.xml文件
+	 （1）xml标签<service> use属性true/false，控制启动链接端口(与appium_desktop启动IP/PORT一致)
+	 （2）xml标签<mobile> use属性true/false，内部标签内容可自行添加（建议与appium_desktop启动参数一致）
+	4.编写.feature执行文件,在test_client/目录下
 	命名方式:****.feature结尾
-	4.test_client目录下运行behave命令或者python start.py
+	5.test_client目录下运行behave命令或者python start.py
 个人本地使用,test_client文件内运行即可
 语法说明请阅读：step_detail.txt
 
