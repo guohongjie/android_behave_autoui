@@ -1,0 +1,27 @@
+说明：{****}为参数变量
+Given 打开 {app_name} 程序,获得当前页面前端源码    说明：{app_name}为变量,业务场景输入值=APK包名,具体可用 aapt dump badging apk_name 查看
+Given 打开 {app_name} 程序,输入启动 {activity} Activity    说明：{app_name} {activity}为变量,activity为APK内应用事件，具体可用adb logcat|grep start后运行APK，该行命令可直接启动APK内某个事件
+Then 进入 {page} 页面,校验 {text} 文本值是否存在    说明：page为当前校验页名称(起提示作用可随意输入,程序未作校验),text为当前页面内文本值，校验该文本值是是否存在
+Then 等待 {sleep} 秒,静等页面加载    说明：sleep为数字，部分页面加载时间慢，需静态等待页面加载完毕
+When 根据ID定位操作 {element} 元素,单击 {case}    说明：find_element_by_id&click定位方法,element为该元素的id值(该元素存在id值前提下可用该方法),case 为记录该步骤操作说明(起提示作用可随意输入,程序未做校验)
+When 根据AccessibilityID定位操作 {element} 元素,单击 {case}      说明：find_element_by_accessibility_id&click定位方法,element为该元素的accessibility_id值(该元素存在accessibility_id值前提下可用该方法),case 为记录该步骤操作说明(起提示作用可随意输入,程序未做校验)
+When 根据ID定位操作 {element} 元素,输入值 {value} 文本值 {case}    说明：find_element_by_id&send_key定位方法,element为该元素的id值(该元素存在id值前提下可用该方法),value为需要输入的文本值,case 为记录该步骤操作说明(起提示作用可随意输入,程序未做校验)
+Then 根据ID定位操作弹出 {title} 文本框,根据 {element} 元素校验文本提示信息 {value} 文本   说明： find_element_by_id定位方法,title为弹出框名称(起提示作用可随意输入,程序未作校验),element为该元素的id值(该元素存在id值前提下可用该方法),value为弹出框的文本
+When 根据XPATH定位操作 {element} 元素,单击 {case}    说明：find_element_by_xpath&clikc定位方法,element为xpath路径,case 为记录该步骤操作说明(起提示作用可随意输入,程序未做校验
+When 根据XPATH定位操作 {element} 元素,输入值 {value} 文本值 {case}    说明：find_element_by_xpath&send_key定位方法,element为该元素的xpath路径,value为需要输入的文本值,case 为记录该步骤操作说明(起提示作用可随意输入,程序未做校验)
+When 根据Text定位,从元素 {start_element} 焦点转移至 {end_element} ,持续 {miao} 时间 scroll_page定位方法,焦点转移
+When 根据Text定位,获取起点 {start} 坐标和终点 {end} 坐标设置参数值等于 {value} 参数值 {case}   说明：页面下拉项选择时启用, 获取第一触屏元素的start坐标,再获取滑动终点元素end的坐标,进行滑动,并校验当参数值等于value时,停止滑动,case 为记录该步骤操作说明(起提示作用可随意输入,程序未做校验
+When 根据ID定位,获取起点 {start} 坐标和终点 {end} 坐标,滑动 {count} 次, {case}    说明：页面滑动时启用,获取第一触屏元素的start坐标,再获取滑动终点元素end的坐标,count滑动次数,case 为记录该步骤操作说明(起提示作用可随意输入,程序未做校验
+When 根据Name定位操作 {element} 元素,单击 {case}
+When 根据ID定位获取组 {element} 元素,单击第 {index} 个元素 {case}
+When 根据CLASS定位获取组 {element} 元素,单击第 {index} 个元素 {case}
+Then 查看当前页面Activity属性 查看当前步骤的activity事件名称
+Then 向上滑动屏幕,操作时间 {date} ,滑动 {count} 次,用于 {case}    说明：常用屏幕滑动方法,基于手机屏幕坐标值向上滑动,data触屏操作滑动时间(毫秒),count滑动次数,case 为记录该步骤操作说明(起提示作用可随意输入,程序未做校验
+Then 向下滑动屏幕,操作时间 {date} ,滑动 {count} 次,用于 {case}    说明：常用屏幕滑动方法,基于手机屏幕坐标值向下滑动,data触屏操作滑动时间(毫秒),count滑动次数,case 为记录该步骤操作说明(起提示作用可随意输入,程序未做校验
+Then 向左滑动屏幕,操作时间 {date} ,滑动 {count} 次,用于 {case}    说明：常用屏幕滑动方法,基于手机屏幕坐标值向左滑动,data触屏操作滑动时间(毫秒),count滑动次数,case 为记录该步骤操作说明(起提示作用可随意输入,程序未做校验
+Then 向右滑动屏幕,操作时间 {date} ,滑动 {count} 次,用于 {case}    说明：常用屏幕滑动方法,基于手机屏幕坐标值向右滑动,data触屏操作滑动时间(毫秒),count滑动次数,case 为记录该步骤操作说明(起提示作用可随意输入,程序未做校验
+Then 自定义滑动屏幕,操作时间 {date} ,滑动 {count} 次,起始百分比 {width} 宽和 {height} 高,终止百分比 {x_width} 宽和 {y_width} 高,用于 {case}
+Then 模拟手指点击 {coordinate} ,点击时常 {n} 毫秒,用于 {case}    说明：常用屏幕坐标点击方法，当元素不存在id 或者xpath时，可基于该元素坐标值进行点击,n为点击时间长短,coordinate为点击坐标值其格式如下：
+[(int("113"),int("429"))]  解释说明： [(int("x"),int("y"))] 单手指点击；[(int("x"),int("y")),(int("x"),int("y")),(int("x"),int("y"))]三手指点击，以此类推；case 为记录该步骤操作说明(起提示作用可随意输入,程序未做校验
+
+Then 随机点击屏幕坐标 {count} 次,点击时常 {t} 毫秒    说明：屏幕坐标点击方法,字如其意

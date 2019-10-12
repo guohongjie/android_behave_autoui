@@ -13,4 +13,6 @@
 	3.编写.feature执行文件,在test_client/目录下
 	命名方式:****.feature结尾
 	4.test_client目录下运行behave命令或者python start.py
+个人本地使用,test_client文件内运行即可
+语法说明请阅读：step_detail.txt
 
