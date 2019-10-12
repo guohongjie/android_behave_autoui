@@ -1,0 +1,17 @@
+文件说明:
+1.feature:场景测试文件
+2.package:APP
+3.report:测试报告产出
+4.test_client:远程客户端执行程序,可从远程发送执行命令,服务器运行;
+5.test_group:服务端并发运行程序(仅在服务端使用)
+运行说明:
+仅以test_client客户端操作为枚举(需提前手动安装APK)
+	1.安装执行程序(略过环境配置及python安装)
+	pip install -r requirements.txt
+	2.配置config文件夹内XML
+		XML分为两部分<service>和<mobile>,可配置多个标签数据,以use的value值 true和false区分
+		PS:<service>只能存在一个true，<mobile>亦然
+	3.编写.feature执行文件,在test_client/目录下
+	命名方式:****.feature结尾
+	4.test_client目录下运行behave命令或者python start.py
+	PS:当feature文件为中文时,behave会报字符集错误

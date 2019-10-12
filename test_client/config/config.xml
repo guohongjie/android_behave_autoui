@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mobileSet>
+    <service use="true">
+        <host>172.10.20.61</host>
+        <port>4271</port>
+    </service>
+    <service use="false">
+        <host>172.0.0.1</host>
+        <port>3421</port>
+    </service>
+    <mobile use="true">
+        <appPackage>com.yunshuxie.bearword</appPackage>
+        <appActivity>com.yunshuxie.bearword.ui.activity.SplashActivity</appActivity>
+        <noReset>True</noReset>
+        <platformName>Android</platformName>
+        <platformVersion>9</platformVersion>
+        <deviceName>huawei nova4e</deviceName>
+        <unicodeKeyboard>True</unicodeKeyboard>
+        <resetKeyboard>True</resetKeyboard>
+        <autoGrantPermissions>True</autoGrantPermissions>
+    </mobile>
+    <mobile use="false">
+        <appPackage></appPackage>
+        <appActivity></appActivity>
+        <noReset></noReset>
+        <platformName></platformName>
+        <platformVersion></platformVersion>
+        <deviceName></deviceName>
+        <unicodeKeyboard></unicodeKeyboard>
+        <resetKeyboard></resetKeyboard>
+        <autoGrantPermissions></autoGrantPermissions>
+    </mobile>
+        <mobile use="false">
+        <appPackage></appPackage>
+        <appActivity></appActivity>
+        <noReset></noReset>
+        <platformName></platformName>
+        <platformVersion></platformVersion>
+        <deviceName></deviceName>
+        <unicodeKeyboard></unicodeKeyboard>
+        <resetKeyboard></resetKeyboard>
+        <autoGrantPermissions></autoGrantPermissions>
+    </mobile>
+</mobileSet>
